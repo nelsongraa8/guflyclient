@@ -1,0 +1,162 @@
+
+.data_movie_poster {
+    color:#ddd;
+    padding-left:10px;
+    display:inline-block
+}
+
+.data_movie_poster > h4 {
+    font-size:16px;
+    font-weight: 600;
+    font-family: "Roboto";
+    display:inline;
+}
+
+.data_creators_movie_poster {
+    display:inline;
+    font-size: 12px;
+    text-align: left;
+}
+
+.container_poster_minidescription , .container_reparto_actores_movie , .container_recomended_movies {
+    display: flex;
+}
+.container_poster_minidescription > div {
+    flex:content;
+}
+
+/* elemento para albergar al boton de download */
+.data_info_download_movie {
+    /* display: flex; */
+    margin:0px 0px;
+    text-align: right;
+}
+.data_info_download_movie > button {
+    font: 14px "Roboto";
+    border-radius:30px;
+    padding: 4px 20px;
+}
+.data_info_download_movie > div {
+    flex:content;
+}
+
+.data_info_general_view_movie > h5 {
+    font-size:14px;
+    font-family: Roboto;
+    margin:0px 0px 5px 0px;
+}
+.data_info_general_view_movie > p {
+    font-size: 13px;
+    margin-bottom: 0px;
+    line-height:1;
+}
+
+.marco_estilo_data_movie {
+    /* padding:10px; */
+    margin:10px;
+    background: #0D0C11;
+    /* box-shadow: #222 0px 0px 1px 10px; */
+    border-radius: 3px;
+}
+.title_marco_estilo_data_movie {
+    color:#fff;
+    font-size:16px;
+    padding:5px 10px;
+    background:#101012;
+    border-radius:4px 4px 0px 0px;
+    font-weight: 600;
+}
+.body_marco_estilo_data_movie {
+    color:#fff;
+    font-size:13px;
+    padding:5px 10px 5px 10px;
+}
+
+/* elemento que crea el gradiente en el fanart principal de la movie */
+.gradient_top_fanart_movie {
+    z-index:1000;
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    background:linear-gradient(to top, #060411, transparent);
+}
+
+/* elemento contenedor de todo el reparto de actores */
+.container_reparto_actores_movie {
+    overflow-x: scroll ;
+}
+
+/* Elementos de cada uno del reparto de actores */
+.container_reparto_actores_movie > div {
+    justify-content: space-between;
+    margin:5px;
+    width:70px;
+    /* height:70px; */
+    /* height:50px; */
+    border-radius:100px;
+    /* background: #999; */
+    text-align: center;
+    /* overflow: hidden; */
+    /* position:relative; */
+}
+
+.container_image_reparto_actores_movie {
+    position:relative; overflow: hidden; width:60px; height: 60px; border-radius: 50px
+}
+.container_image_reparto_actores_movie > img {
+    width:60px;
+    top:0%;
+    left:0px;
+    position: absolute;
+}
+
+.container_other_data_movie > div {
+    display:inline-block;
+    margin:5px 20px;
+}
+
+.container_other_data_movie .value_info_aditional_movie {
+    color:#aaa;
+    display:inline-block;
+}
+
+/* contenedor para peliculas recomendadas */
+.container_recomended_movies {
+    display:flex;
+    overflow-x: auto;
+    margin-bottom: 90px;
+}
+
+.element_movie_recomended {
+    /* justify-content: space-between; */
+    border-radius:5px;
+    background:#0D0C11;
+    margin:10px 3px;
+    padding:7px 7px 14px 7px;
+    /* max-width:150px; */
+}
+
+.element_movie_recomended > img {
+    /* max-width:100%; */
+    width:120px;
+    border:0px;
+    border-radius:7px;
+    margin-bottom: 7px;
+}
+
+.element_movie_recomended > div {
+    color:#999;
+    font-size:12px;
+}
+
+.container_bottom_this_movie {
+    position: fixed;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    padding:10px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index:1000;
+}

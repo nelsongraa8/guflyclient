@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; */
+
+/* @import "../node_modules/bootstrap/dist/css/bootstrap.min.css"; */
+
+
+
+/* @import "../node_modules/primeng/resources/primeng.css"; */
+/* @import "../node_modules/primeng/resources/themes/saga-blue/theme.css"; */
+/* @import "../node_modules/primeng/resources/primeng.min.css"; */
+
+/**  Estilos generales */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/roboto/Roboto-Regular.ttf");
+}
+
+body {
+    background:#060411;
+    margin:0px;
+    padding:0px;
+    font-family: "calibri";
+}
+
