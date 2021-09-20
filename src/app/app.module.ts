@@ -5,19 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovieComponent } from './movie/movie.component';
 import { CardmovieComponent } from './cardmovie/cardmovie.component';
-
-//import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
-    CardmovieComponent
+    CardmovieComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,  // Este modulo carga el sistema del navegador
     AppRoutingModule,  // Este modulo canrga las rutas
-    //NgbModule,  // Este modulo carga el bootstrap
   ],
   providers: [],
   bootstrap: [AppComponent]

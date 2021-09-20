@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
 
 const routes: Routes = [
-  //{ path: '', component: AppComponent,  pathMatch: 'full'},
-  { path: 'movie', component: MovieComponent,  pathMatch: 'full'}
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'movie/:id', component: MovieComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
