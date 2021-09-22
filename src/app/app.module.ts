@@ -7,6 +7,8 @@ import { MovieComponent } from './movie/movie.component';
 import { CardmovieComponent } from './cardmovie/cardmovie.component';
 import { HomeComponent } from './home/home.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +19,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,  // Este modulo carga el sistema del navegador
     AppRoutingModule,  // Este modulo canrga las rutas
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
