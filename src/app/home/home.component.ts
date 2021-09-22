@@ -10,18 +10,23 @@ export class HomeComponent implements OnInit {
 
     recomended_movies:any = [];
 
-    constructor( private allmovieService : AllmovieService ) {
-      this.recomended_movies = [
-        { 'name' : '6 Underground' , 'foto' : '6_underground-411208949-mmed.jpg' , 'anno' : '2016' },
-        { 'name' : '10LXS' , 'foto' : '10-latidos-por-segundo-834x1024.jpg' , 'anno' : '2020' },
-        { 'name' : 'Rapido y Furioso' , 'foto' : '2_fast_2_furious-199382456-mmed.jpg' , 'anno' : '2006' },
-      ];
-    }
+    constructor( private allmovieService : AllmovieService ) { }
 
     ngOnInit() {
       this.allmovieService.getMovies().then(
         (movies : any) => {
-          console.log(movies);
+          console.log(movies.data[0]);
+
+          let index = 0;
+          for (let iterator of movies.data) {
+            let nombre = iterator.nombre;
+            let poster = iterator.poster;
+            let anno = iterator.anno;
+
+            this.recomended_movies[index] = { 'name' : nombre , 'foto' : poster , 'anno' : anno };
+
+            index++;
+          }
         }
       )
     }
