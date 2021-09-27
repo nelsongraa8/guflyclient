@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class AllmovieService {
   constructor( private http : HttpClient ) { }
 
   getMovies() : any {
-    return this.http.get('http://localhost:8000/allmoviedata').toPromise();
+    return this.http.get( environment.url+'/allmoviedata' ).toPromise();
   }
 
 }
