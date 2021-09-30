@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-movie',
@@ -13,7 +14,9 @@ export class MovieComponent implements OnInit {
   data_movie:any = [];
   recomended_movies:any = [];
 
-  constructor() {
+  id_route_movie:any;
+
+  constructor( private rutaActiva: ActivatedRoute ) {
     this.poster = 'poster.jpg';
     this.lista = [
       { 'foto':'Ryan_Reynolds.jpg', 'name':'Ryan Reynolds' },
@@ -36,6 +39,8 @@ export class MovieComponent implements OnInit {
     ]
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.id_route_movie = this.rutaActiva.snapshot.params.id_movie;
+  }
 
 }

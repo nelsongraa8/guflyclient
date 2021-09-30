@@ -37,13 +37,13 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
       this.allmovieService.getMovies().then(
         (movies_data : any) => {
-          this.allmovies = this.array_data_json( movies_data );
+          this.allmovies = movies_data.data;
         }
       );
 
       this.destcadosService.getRelevantes().then(
         ( destacados_data : any ) => {
-          this.alldestacados = this.array_data_json( destacados_data );
+          this.alldestacados = destacados_data.data;
         }
       );
 
