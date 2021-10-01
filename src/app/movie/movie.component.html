@@ -1,7 +1,7 @@
 <div class="container" style="max-width:1000px">
   <div class="row">
     <div class="col-12" style="padding:0px; position:relative">
-      <img src="./assets/image/fanart.jpg" style="max-width:100%" alt="">
+      <img src="{{ movie_singler.fanart }}" style="max-width:100%" alt="">
       <div class="gradient_top_fanart_movie"></div>
     </div>
 
@@ -9,20 +9,20 @@
       <div style="padding:10px; z-index:1000; margin-top:-70px">
         <nav class="container_poster_minidescription">
           <div class="text-right" style="max-width:180px; text-align: right;">
-            <img src="./assets/image/{{ poster }}" alt="" style="width:100%; border:0px; border-radius:5px">
+            <img src="{{ movie_singler.poster }}" alt="" style="width:100%; border:0px; border-radius:5px">
           </div>
           <div>
             <div class="data_movie_poster">
               <h4>
-                Duro de Cuidar {{ id_route_movie }}
-                <span style="font:100 12px Roboto">(2019)</span>
+                {{ movie_singler.nombre }}
+                <span style="font:100 12px Roboto">({{ movie_singler.anno }})</span>
               </h4>
               <br>
               <div class="data_creators_movie_poster">
-                <span>2019</span> -
-                <span>Netflix</span> -
-                <span>Ingles</span> -
-                <span>Drama</span>
+                <span>{{ movie_singler.anno }}</span> -
+                <span>{{ movie_singler.productora }}</span> -
+                <span>{{ movie_singler.idioma_subtitulo }}</span> -
+                <span>{{ movie_singler.genero }}</span>
               </div>
               <div class="data_info_download_movie">
                 <button class="btn btn-primary">
@@ -31,7 +31,7 @@
               </div>
               <div class="data_info_general_view_movie">
                 <h5>Vista General</h5>
-                <p>{{ description }}</p>
+                <p>{{ movie_singler.descripcion }}</p>
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@
       </div>
   </div>
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-12" style="padding:0px">
       <div class="marco_estilo_data_movie">
         <div class="title_marco_estilo_data_movie">
@@ -59,7 +59,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="row">
     <div class="col-12" style="padding:0px">
@@ -68,7 +68,7 @@
           Descripcion
         </div>
         <div class="body_marco_estilo_data_movie">
-          <p>{{ description }}</p>
+          <p>{{ movie_singler.descripcion }}</p>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@
           <nav class="container_other_data_movie">
             <div *ngFor="let item of data_movie">
               <div>
-                <i class="fa fa-hourglass-half"></i>
+                <!-- <i class="fa fa-hourglass-half"></i> -->
                 {{ item.name }}
               </div>
               <div class="value_info_aditional_movie">
@@ -117,12 +117,12 @@
 
 <div class="container_bottom_this_movie">
   <div style="display:flex; color:#ddd">
-    <img src="./assets/image/{{ poster }}" alt="" style="flex:auto; max-width:50px; border:0px; border-radius:5px">
+    <img src="{{ movie_singler.poster }}" alt="" style="flex:auto; max-width:50px; border:0px; border-radius:5px">
     <div style="margin-left:10px; flex:auto; display:flex; justify-content: left; align-items: center;">
       <div>
-        <div style="display:block; color:#eee; font-size: 18px; font-weight: 600;">Duro de Cuidar</div>
-      <div style="display:block; color:#999; font-size:14px">Netflix</div>
-      <div style="display:block; color:#999; font-size:12px">2017</div>
+        <div style="display:block; color:#eee; font-size: 18px; font-weight: 600;">{{ movie_singler.nombre }}</div>
+      <div style="display:block; color:#999; font-size:14px">{{ movie_singler.productora }}</div>
+      <div style="display:block; color:#999; font-size:12px">{{ movie_singler.anno }}</div>
       </div>
     </div>
     <div style="text-align: right; flex:auto; display:flex; justify-content: right; align-items: center">
