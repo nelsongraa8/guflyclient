@@ -3,7 +3,7 @@
 }
 
 .image_company_video {
-    width:120px;
+    /* width:120px; */
     height: 75px;
     border-radius: 7px;
     margin:10px 5px
@@ -48,3 +48,53 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+
+
+/** contenedor para scroll personalisado */
+.contenedor_autoscroll {
+    /*margin: 1rem auto;*/
+    /* border: 1px solid #aaa; */
+    height: auto;
+    /* width:100%; */
+    max-width: 100%;
+    /* background: #f1f2f3; */
+    overflow:auto;
+    box-sizing: border-box;
+    padding:0 1rem;
+    display:flex;
+
+    /*Estilos estándar experimentales (Principalmente Firefox)*/
+    /* scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0); */
+    scrollbar-color:#fff;
+    scrollbar-width: thin;
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.contenedor_autoscroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.contenedor_autoscroll::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.contenedor_autoscroll::-webkit-scrollbar-button:increment,.contenedor_autoscroll::-webkit-scrollbar-button {
+    display: none;
+}
+
+.contenedor_autoscroll::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+
+.contenedor_autoscroll::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    /* border: 2px solid #f1f2f3; */
+}
+
+.contenedor_autoscroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+/*  fin del contenedor personalisado  */

@@ -15,12 +15,12 @@
 
                 <div style="position:absolute; top:0px; right:0px; bottom:0px; left:0px; z-index:100; background:linear-gradient(to top, #060411 1%, transparent 99%);"></div>
 
-                <div style="position:absolute; top:0px; right:0px; bottom:0px; left:0px; z-index:10000; display: flex; align-items: flex-end; justify-content: center; padding:20px">
+                <!-- <div style="position:absolute; top:0px; right:0px; bottom:0px; left:0px; z-index:10000; display: flex; align-items: flex-end; justify-content: center; padding:20px">
                     <div style="color:#ddd; text-align: center;">
                         <h3>Bienvenidos</h3>
                         <div style="color:#bbb; font-size:14px; padding:0px 15px">Centenares de peliculas, programas de television y personas por descubrir. Exploralo Ahora.</div>
                     </div>
-                </div>
+                </div> -->
 
                 <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -37,14 +37,14 @@
 
     <div class="row">
         <div class="col col-12">
-            <div style="display:flex; overflow-x: scroll">
+            <div class="contenedor_autoscroll">
                 <img class="image_company_video" src="./assets/image/disney.jpg">
                 <img class="image_company_video" src="./assets/image/prime.jpg">
                 <img class="image_company_video" src="./assets/image/hbo.jpg">
                 <img class="image_company_video" src="./assets/image/Netflix.jpg">
                 <img class="image_company_video" src="./assets/image/Hulud.jpg">
                 <img class="image_company_video" src="./assets/image/apple tv.png">
-                <img class="image_company_video" src="./assets/image/YouTube Premium.png">
+                <!-- <img class="image_company_video" src="./assets/image/YouTube Premium.png"> -->
             </div>
         </div>
     </div>
@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="col col-12">
-            <div class="container_recomended_movies" style="margin-bottom: 0px;">
+            <div class="container_recomended_movies contenedor_autoscroll" style="margin-bottom: 10px;">
                 <app-cardmovie *ngFor="let item of allmovies; let i=index" [item]="item"></app-cardmovie>
             </div>
         </div>
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="col col-12">
-                <div class="container_recomended_movies" style="margin-bottom: 0px; background:transparent">
+                <div class="container_recomended_movies contenedor_autoscroll" style="margin-bottom: 0px; background:transparent">
                     <app-cardmovie *ngFor="let item of allmovies" [item]="item"></app-cardmovie>
                 </div>
             </div>
