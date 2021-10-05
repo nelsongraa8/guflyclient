@@ -92,7 +92,7 @@
 .container_reparto_actores_movie > div {
     justify-content: space-between;
     margin:5px;
-    width:70px;
+    width:90px;
     /* height:70px; */
     /* height:50px; */
     border-radius:100px;
@@ -103,10 +103,10 @@
 }
 
 .container_image_reparto_actores_movie {
-    position:relative; overflow: hidden; width:60px; height: 60px; border-radius: 50px
+    position:relative; overflow: hidden; width:80px; height: 80px; border-radius: 50px
 }
 .container_image_reparto_actores_movie > img {
-    width:60px;
+    width:80px;
     top:0%;
     left:0px;
     position: absolute;

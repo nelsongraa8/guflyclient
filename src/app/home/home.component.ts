@@ -13,24 +13,24 @@ export class HomeComponent implements OnInit {
     allmovies:any = [];
     alldestacados:any = [];
 
-    array_data_json( this_array : any ) {
-      let index = 0;
-      let array_json = [];
+    // array_data_json( this_array : any ) {
+    //   let index = 0;
+    //   let array_json = [];
 
-      for (let iterator of this_array.data) {
-        let nombre = iterator.nombre;
-        let poster = iterator.poster;
-        let anno = iterator.anno;
-        let fanart = iterator.fanart;
+    //   for (let iterator of this_array.data) {
+    //     let nombre = iterator.nombre;
+    //     let poster = iterator.poster;
+    //     let anno = iterator.anno;
+    //     let fanart = iterator.fanart;
 
-        array_json[index] = { 'name' : nombre , 'foto' : poster , 'anno' : anno , 'fanart' : fanart  };
+    //     array_json[index] = { 'name' : nombre , 'foto' : poster , 'anno' : anno , 'fanart' : fanart  };
 
-        index++;
-      }
+    //     index++;
+    //   }
 
-      console.log(array_json)
-      return array_json;
-    }
+    //   console.log(array_json)
+    //   return array_json;
+    // }
 
     constructor( private allmovieService : AllmovieService, private destcadosService : DestacadosService ) { }
 

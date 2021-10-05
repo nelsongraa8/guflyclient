@@ -10,7 +10,15 @@ export class MovieService {
   constructor( private http : HttpClient ) {}
 
   getSinglerMovies( id_ruta_service : any ) : any {
-    return this.http.get( environment.url+'/moviedata/'+id_ruta_service ).toPromise();
+    return this.http
+    .get( environment.url+'/moviedata/'+id_ruta_service )
+    .toPromise();
+  }
+
+  getDataMovieAPI( getDataMovieAPI : any ) : any {
+    return this.http
+    .get( 'https://api.themoviedb.org/3/movie/'+getDataMovieAPI+'?api_key=834059cb24bc11be719c241a12f537f4' )
+    .toPromise();
   }
 
 }

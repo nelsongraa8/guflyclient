@@ -1,28 +1,27 @@
-<div class="container" style="max-width:1000px">
+<div class="container" style="max-width:1000px; /*margin-bottom:60px*/">
   <div class="row">
     <div class="col-12" style="padding:0px; position:relative">
-      <img src="{{ movie_singler.fanart }}" style="max-width:100%" alt="">
+      <img src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/{{ movie_singler_api.backdrop_path }}" style="max-width:100%" alt="">
       <div class="gradient_top_fanart_movie"></div>
     </div>
 
     <!-- <div style="padding:20px; position:absolute; right:0px; bottom:-100px; left:0px"> -->
-      <div style="padding:10px; z-index:1000; margin-top:-70px">
+      <div style="padding:10px; z-index:1000; margin-top:-20px">
         <nav class="container_poster_minidescription">
           <div class="text-right" style="max-width:180px; text-align: right;">
-            <img src="{{ movie_singler.poster }}" alt="" style="width:100%; border:0px; border-radius:5px">
+            <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ movie_singler_api.poster_path }}" alt="" style="max-width:120px; border:0px; border-radius:5px">
           </div>
           <div>
             <div class="data_movie_poster">
               <h4>
-                {{ movie_singler.nombre }}
-                <span style="font:100 12px Roboto">({{ movie_singler.anno }})</span>
+                {{ movie_singler_api.title }}
+                <span style="font:100 12px Roboto">({{ anno_estreno }})</span>
               </h4>
               <br>
               <div class="data_creators_movie_poster">
-                <span>{{ movie_singler.anno }}</span> -
-                <span>{{ movie_singler.productora }}</span> -
-                <span>{{ movie_singler.idioma_subtitulo }}</span> -
-                <span>{{ movie_singler.genero }}</span>
+                <span style="padding:1px 4px; margin-right:5px; border:1px solid #555; border-radius: 3px;">R</span>
+                <span>{{ movie_singler_api.release_date }}</span>
+                <span> ({{ format_genero_movie('coma_title') }})</span>
               </div>
               <div class="data_info_download_movie">
                 <button class="btn btn-primary">
@@ -30,8 +29,10 @@
                   </button>
               </div>
               <div class="data_info_general_view_movie">
+                <div style="margin:7px auto; font-size:12px"><i>{{ movie_singler_api.tagline }}</i></div>
                 <h5>Vista General</h5>
-                <p>{{ movie_singler.descripcion }}</p>
+                <p style="overflow: hidden; height: 50px;">{{ movie_singler_api.overview }}</p>
+                <p style="text-align: left;">...</p>
               </div>
             </div>
           </div>
@@ -39,7 +40,7 @@
       </div>
   </div>
 
-  <!-- <div class="row">
+  <div class="row">
     <div class="col-12" style="padding:0px">
       <div class="marco_estilo_data_movie">
         <div class="title_marco_estilo_data_movie">
@@ -47,28 +48,18 @@
         </div>
         <div class="body_marco_estilo_data_movie">
           <nav class="container_reparto_actores_movie">
-            <div *ngFor="let item of lista">
+            <div *ngFor="let item of lista_actores">
               <div class="container_image_reparto_actores_movie">
-                <img src="./assets/image/{{ item.foto }}">
+                <img src="{{ item.foto }}">
               </div>
-              <div style="height:40px; overflow: hidden;">
-                {{ item.name }}
+              <div style="max-height:40px; overflow: hidden;">
+                <b>{{ item.name }}</b>
+              </div>
+              <div style="max-height:30px; overflow: hidden; font-size:12px">
+                {{ item.name_character }}
               </div>
             </div>
           </nav>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <div class="row">
-    <div class="col-12" style="padding:0px">
-      <div class="marco_estilo_data_movie">
-        <div class="title_marco_estilo_data_movie">
-          Descripcion
-        </div>
-        <div class="body_marco_estilo_data_movie">
-          <p>{{ movie_singler.descripcion }}</p>
         </div>
       </div>
     </div>
@@ -82,13 +73,94 @@
         </div>
         <div class="body_marco_estilo_data_movie">
           <nav class="container_other_data_movie">
-            <div *ngFor="let item of data_movie">
+            <div>
               <div>
-                <!-- <i class="fa fa-hourglass-half"></i> -->
-                {{ item.name }}
+                <i class="fa fa-hourglass-half"></i>
+                Duracion
               </div>
               <div class="value_info_aditional_movie">
-                {{ item.value }}
+                {{ duracion }}
+              </div>
+            </div>
+            <div>
+              <div>
+                <i class="fa fa-calendar"></i>
+                Año
+              </div>
+              <div class="value_info_aditional_movie">
+                {{ anno_estreno }}
+              </div>
+            </div>
+            <div>
+              <div>
+                <i class="fa fa-calendar"></i>
+                Subtitulo
+              </div>
+              <div class="value_info_aditional_movie">
+                {{ idioma_subtitle }}
+              </div>
+            </div>
+            <div>
+              <div>
+                <i class="fa fa-calendar"></i>
+                Titulo Original
+              </div>
+              <div class="value_info_aditional_movie">
+                {{ movie_singler_api.original_title }}
+              </div>
+            </div>
+            <div>
+              <div>
+                <i class="fa fa-calendar"></i>
+                Idioma Original
+              </div>
+              <div class="value_info_aditional_movie">
+                {{ format_language_movie() }}
+              </div>
+            </div>
+            <div>
+              <div>
+                <i class="fa fa-calendar"></i>
+                Presupuesto
+              </div>
+              <div class="value_info_aditional_movie">
+                {{ movie_singler_api.budget }} USD
+              </div>
+            </div>
+            <div>
+              <div>
+                <i class="fa fa-calendar"></i>
+                Ingresos
+              </div>
+              <div class="value_info_aditional_movie">
+                {{ movie_singler_api.revenue }} USD
+              </div>
+            </div>
+            <div>
+              <div>
+                <i class="fa fa-calendar"></i>
+                Estado
+              </div>
+              <div class="value_info_aditional_movie">
+                {{ format_status_movie() }}
+              </div>
+            </div>
+            <div>
+              <div>
+                <i class="fa fa-calendar"></i>
+                Género
+              </div>
+              <div class="value_info_aditional_movie">
+                {{ format_genero_movie('coma_title') }}
+              </div>
+            </div>
+            <div>
+              <div>
+                <i class="fa fa-calendar"></i>
+                Director
+              </div>
+              <div class="value_info_aditional_movie">
+                {{ format_director_movie('coma_title') }}
               </div>
             </div>
           </nav>
@@ -98,6 +170,19 @@
   </div>
 
   <div class="row">
+    <div class="col-12" style="padding:0px">
+      <div class="marco_estilo_data_movie">
+        <div class="title_marco_estilo_data_movie">
+          Descripcion
+        </div>
+        <div class="body_marco_estilo_data_movie">
+          <p>{{ movie_singler_api.overview }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="row">
     <div class="col-12" style="padding:0px">
       <div class="container_recomended_movies">
         <div class="element_movie_recomended" *ngFor="let item of recomended_movies">
@@ -111,25 +196,27 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </div>
 
-<div class="container_bottom_this_movie">
+<!-- <div class="container_bottom_this_movie">
   <div style="display:flex; color:#ddd">
-    <img src="{{ movie_singler.poster }}" alt="" style="flex:auto; max-width:50px; border:0px; border-radius:5px">
+    <img
+    src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/{{ movie_singler_api.poster_path }}"
+    style="flex:auto; max-width:50px; border:0px; border-radius:5px">
     <div style="margin-left:10px; flex:auto; display:flex; justify-content: left; align-items: center;">
       <div>
-        <div style="display:block; color:#eee; font-size: 18px; font-weight: 600;">{{ movie_singler.nombre }}</div>
-      <div style="display:block; color:#999; font-size:14px">{{ movie_singler.productora }}</div>
-      <div style="display:block; color:#999; font-size:12px">{{ movie_singler.anno }}</div>
+        <div style="display:block; color:#eee; font-size: 18px; font-weight: 600;">{{ movie_singler_api.title }}</div>
+        <div style="display:block; color:#999; font-size:14px">{{ movie_singler.productora }}</div>
+        <div style="display:block; color:#999; font-size:12px">{{ anno_estreno }}</div>
       </div>
     </div>
     <div style="text-align: right; flex:auto; display:flex; justify-content: right; align-items: center">
-      <button class="btn btn-primary" style="border-radius:30px; padding:1px 15px">
+      <button class="btn btn-primary" style="font-size:12px; border-radius:30px; padding:1px 15px">
         Descargar
         <i class="fa fa-download"></i>
       </button>
     </div>
   </div>
-</div>
+</div> -->
