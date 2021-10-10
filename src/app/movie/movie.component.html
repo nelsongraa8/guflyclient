@@ -24,15 +24,15 @@
                 <span> ({{ format_genero_movie('coma_title') }})</span>
               </div>
               <div class="data_info_download_movie">
-                <button class="btn btn-primary">
-                    Descargar <i class="fa fa-download"></i>
+                  <button class="btn btn-primary">
+                      <a href="{{ movie_singler.url }}" style="color:#fff">Descargar <i class="fa fa-download"></i></a>
                   </button>
               </div>
               <div class="data_info_general_view_movie">
                 <div style="margin:7px auto; font-size:12px"><i>{{ movie_singler_api.tagline }}</i></div>
                 <h5>Vista General</h5>
                 <p style="overflow: hidden; height: 50px;">{{ movie_singler_api.overview }}</p>
-                <p style="text-align: left;">...</p>
+                <p style="text-align: left">...</p>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@
                 {{ format_language_movie() }}
               </div>
             </div>
-            <div>
+            <!-- <div>
               <div>
                 <i class="fa fa-calendar"></i>
                 Presupuesto
@@ -126,8 +126,8 @@
               <div class="value_info_aditional_movie">
                 {{ movie_singler_api.budget }} USD
               </div>
-            </div>
-            <div>
+            </div> -->
+            <!-- <div>
               <div>
                 <i class="fa fa-calendar"></i>
                 Ingresos
@@ -135,7 +135,7 @@
               <div class="value_info_aditional_movie">
                 {{ movie_singler_api.revenue }} USD
               </div>
-            </div>
+            </div> -->
             <div>
               <div>
                 <i class="fa fa-calendar"></i>

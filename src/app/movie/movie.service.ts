@@ -11,7 +11,7 @@ export class MovieService {
 
   getSinglerMovies( id_ruta_service : any ) : any {
     return this.http
-    .get( environment.url+'/moviedata/'+id_ruta_service )
+    .get( environment.url+'/single/movie/'+id_ruta_service )
     .toPromise();
   }
 

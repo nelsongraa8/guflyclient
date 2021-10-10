@@ -135,7 +135,7 @@ export class MovieComponent implements OnInit {
     let salida;
 
     if( language == 'en' ) { salida = 'Ingles' }
-    if( language == 'es' ) { salida = 'Español' }
+    else if( language == 'es' ) { salida = 'Español' }
     else { salida = language; }
 
     return salida;
