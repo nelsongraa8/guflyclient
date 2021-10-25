@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,  // Este modulo carga el sistema del navegador
     AppRoutingModule,  // Este modulo canrga las rutas
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

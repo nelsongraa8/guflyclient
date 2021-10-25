@@ -20,7 +20,7 @@
 }
 
 body {
-    background:#060411;
+    background: radial-gradient(ellipse, #130D34, #060410);
     margin:0px;
     padding:0px;
     font-family: "calibri";

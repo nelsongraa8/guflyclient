@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AllmovieService } from './allmovie.service';
 import { DestacadosService } from './destacados.service';
+import { LastmoviesService } from './lastmovies.service';
 
 @Component({
   selector: 'app-home',
@@ -12,40 +13,35 @@ export class HomeComponent implements OnInit {
     recomended_movies:any = [];
     allmovies:any = [];
     alldestacados:any = [];
+    lastmovies:any = [];
 
-    // array_data_json( this_array : any ) {
-    //   let index = 0;
-    //   let array_json = [];
+    /** varibales del buscador de peliculas */
+    inputsearch:any = 'ej. Duro de Cuidar';
 
-    //   for (let iterator of this_array.data) {
-    //     let nombre = iterator.nombre;
-    //     let poster = iterator.poster;
-    //     let anno = iterator.anno;
-    //     let fanart = iterator.fanart;
-
-    //     array_json[index] = { 'name' : nombre , 'foto' : poster , 'anno' : anno , 'fanart' : fanart  };
-
-    //     index++;
-    //   }
-
-    //   console.log(array_json)
-    //   return array_json;
-    // }
-
-    constructor( private allmovieService : AllmovieService, private destcadosService : DestacadosService ) { }
+    constructor( 
+      private allmovieService : AllmovieService,
+      private destcadosService : DestacadosService,
+      private lastmoviesService : LastmoviesService  
+    ) { }
 
     ngOnInit() {
       this.allmovieService.getMovies().then(
         (movies_data : any) => {
-          this.allmovies = movies_data.data;
+          this.allmovies = movies_data;
         }
       );
 
       this.destcadosService.getRelevantes().then(
         ( destacados_data : any ) => {
-          this.alldestacados = destacados_data.data;
+          this.alldestacados = destacados_data;
         }
       );
+
+      this.lastmoviesService.getLastMovies().then(
+        ( lastmovies_data : any ) => {
+          this.lastmovies = lastmovies_data;
+        }
+      )
 
     }
 
@@ -55,6 +51,10 @@ export class HomeComponent implements OnInit {
         classes = 'active';
       }
       return classes;
+    }
+
+    search_movie():void {
+      console.log( this.inputsearch );
     }
 
 }

@@ -61,7 +61,7 @@
     /* background: #f1f2f3; */
     overflow:auto;
     box-sizing: border-box;
-    padding:0 1rem;
+    /* padding:0 1rem; */
     display:flex;
 
     /*Estilos estándar experimentales (Principalmente Firefox)*/

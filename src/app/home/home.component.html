@@ -4,60 +4,77 @@
         <div class="col-12" style="padding:0px">
             <div style="position:relative">
 
-                <div style="position:absolute; top:7px; right:5px; left:5px; z-index:10000">
+                <!-- <div style="position:absolute; top:7px; right:5px; left:5px; z-index:10000">
                     <div class="input-group">
-                        <input type="text" style="color:#ddd; background: #333; border:0px; color:#ddd" class="form-control" placeholder="ej. Duro de Cuidar" aria-label="Input group example" aria-describedby="btnGroupAddon2">
-                        <div class="input-group-text" id="btnGroupAddon2" style="background:#333; border:0px; color:#ddd">
+                        <input type="text"
+                            style="color:#ddd; background: #333; border:0px; color:#ddd"
+                            class="form-control" placeholder="ej. Duro de Cuidar"
+                            aria-label="Input group example"
+                            aria-describedby="btnGroupAddon2"
+                            [(ngModel)]="inputsearch">
+                        <div class="input-group-text" id="btnGroupAddon2" style="background:#333; border:0px; color:#ddd" (click)="search_movie()">
                             <i class="fa fa-search"></i>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div style="position:absolute; top:0px; right:0px; bottom:0px; left:0px; z-index:100; background:linear-gradient(to top, #060411 1%, transparent 99%);"></div>
-
-                <!-- <div style="position:absolute; top:0px; right:0px; bottom:0px; left:0px; z-index:10000; display: flex; align-items: flex-end; justify-content: center; padding:20px">
-                    <div style="color:#ddd; text-align: center;">
-                        <h3>Bienvenidos</h3>
-                        <div style="color:#bbb; font-size:14px; padding:0px 15px">Centenares de peliculas, programas de television y personas por descubrir. Exploralo Ahora.</div>
-                    </div>
-                </div> -->
 
                 <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item"
                         *ngFor="let item of alldestacados; let i=index"
                         [ngClass]="getClass(i)">
-                            <img src="{{ item.fanart }}" class="d-block w-100">
+                            <img src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces{{ item.data_tmdb.backdrop_path }}" class="d-block w-100">
                         </div>
                     </div>
                 </div>
+
+                <!-- <div class="contenedor_autoscroll">
+                    <img class="image_company_video" src="./assets/image/disney.jpg">
+                    <img class="image_company_video" src="./assets/image/prime.jpg">
+                    <img class="image_company_video" src="./assets/image/hbo.jpg">
+                    <img class="image_company_video" src="./assets/image/Netflix.jpg">
+                </div> -->
+
             </div>
         </div>
-    </div>
 
-    <div class="row">
+        <!-- <div class="col col-12">
+            <div style="display: flex; align-items: flex-end; justify-content: center; padding:0px 20px">
+                <div style="color:#ddd; text-align: center;">
+                    <h3>Bienvenidos</h3>
+                    <div style="color:#bbb; font-size:14px; padding:0px 15px">
+                        Centenares de peliculas y series por descubrir. Exploralo Ahora.
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
         <div class="col col-12">
             <div class="contenedor_autoscroll">
                 <img class="image_company_video" src="./assets/image/disney.jpg">
                 <img class="image_company_video" src="./assets/image/prime.jpg">
                 <img class="image_company_video" src="./assets/image/hbo.jpg">
                 <img class="image_company_video" src="./assets/image/Netflix.jpg">
-                <img class="image_company_video" src="./assets/image/Hulud.jpg">
-                <img class="image_company_video" src="./assets/image/apple tv.png">
-                <!-- <img class="image_company_video" src="./assets/image/YouTube Premium.png"> -->
             </div>
         </div>
+
     </div>
 
-    <div class="row">
-        <div class="col col-12">
-            <div style="font-size:16px; color:#ddd">
-                Recomendaciones
+</div>
+
+<div class="container container_home_movies">
+    <div class="row" style="padding:0px 10px">
+        <div class="col col-12" >
+            <div style="color:#fff">
+                <div style="font-size: 16px; font-weight: 600">Añadidos recientemente</div>
+                <div style="font-size: 12px;">Las ultimas peliculas que añadimos para usted</div>
             </div>
         </div>
         <div class="col col-12">
-            <div class="container_recomended_movies contenedor_autoscroll" style="margin-bottom: 10px;">
-                <app-cardmovie *ngFor="let item of allmovies; let i=index" [item]="item"></app-cardmovie>
+            <div class="container_recomended_movies contenedor_autoscroll" style="margin-bottom: 0px; background:transparent">
+                <app-cardmovie *ngFor="let item of lastmovies" [item]="item"></app-cardmovie>
             </div>
         </div>
     </div>
@@ -65,16 +82,16 @@
 
 <div class="container container_home_movies">
     <div class="row" style="padding:0px 10px">
-        <div style="background:linear-gradient(to top, #201A6B, #120E34 ); border-radius: 5px; padding:10px">
+        <div style="background:linear-gradient(to top, #201A6B, #120E34 ); border-radius: 8px; padding:15px; margin:10px; width:calc(100% - 20px)">
             <div class="col col-12" >
                 <div style="color:#fff">
-                    <div style="font-size: 18px; font-weight: 600">Mejores Peliculas de Accion</div>
-                    <div style="font-size: 12px;">Explore miles de peliculas y disfrute descargando su genero favorito</div>
+                    <div style="font-size: 16px; font-weight: 600">Mejores Peliculas</div>
+                    <div style="font-size: 12px;">Peliculas recomendadas para usted</div>
                 </div>
             </div>
             <div class="col col-12">
                 <div class="container_recomended_movies contenedor_autoscroll" style="margin-bottom: 0px; background:transparent">
-                    <app-cardmovie *ngFor="let item of allmovies" [item]="item"></app-cardmovie>
+                    <app-cardmovie *ngFor="let item of alldestacados" [item]="item"></app-cardmovie>
                 </div>
             </div>
         </div>
@@ -83,9 +100,21 @@
 
 <div class="container-fluid container_home_movies">
     <div class="row">
-        <div class="col col-12">
-            <div class="all_view_movie">
-                <app-cardmovie *ngFor="let item of allmovies; let i=index" [item]="item"></app-cardmovie>
+        <div>
+            <div class="col col-12" >
+                <div style="color:#fff">
+                    <div style="font-size: 18px; font-weight: 600">
+                        Peliculas <span style="font:100 14px calibri">(2021)</span>
+                    </div>
+                    <div style="font-size: 12px">
+                        Explora centenares de películas y disfruta descargando tus géneros preferidos.
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12">
+                <div class="all_view_movie">
+                    <app-cardmovie *ngFor="let item of allmovies; let i=index" [item]="item"></app-cardmovie>
+                </div>
             </div>
         </div>
     </div>
