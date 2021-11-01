@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+
+  inputsearch:any
+
+  search_movie():void {
+    this.inputsearch = 'this search';
+    console.log(this.inputsearch);
+  }
 }

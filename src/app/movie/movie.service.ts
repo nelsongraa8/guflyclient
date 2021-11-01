@@ -10,6 +10,8 @@ export class MovieService {
   constructor( private http : HttpClient ) {}
 
   getSinglerMovies( id_ruta_service : any ) : any {
+    console.log(id_ruta_service)
+    
     return this.http
     .get( environment.url+'/single/movie/'+id_ruta_service )
     .toPromise();

@@ -1,0 +1,18 @@
+.search_main_page_movie > input {
+    color:#ddd;
+    background: #232323;
+    border:0px;
+    color:#ddd;
+}
+
+.navbar_main_page {
+    background: linear-gradient( -50deg,#2C2B2C, #0F0F10 );
+}
+
+.container_general_navbar_page {
+    position: fixed;
+    top:0px;
+    right:0px;
+    left:0px;
+    z-index:100
+}

@@ -6,17 +6,14 @@
 }
 
 .element_movie_recomended {
-    /* justify-content: space-between; */
-    border-radius:5px;
-    background:#0D0C11;
-    margin:10px 3px;
-    padding:7px 7px 14px 7px;
-    /* max-width:150px; */
+    border-radius:10px;
+    background: rgba(19,19,19,0.6);;
+    margin:10px;
+    padding:12px 10px 10px 10px;
 }
 
 .element_movie_recomended > img {
-    /* max-width:100%; */
-    width:120px;
+    width:180px;  /* Este valor deberia cambiar segun si pantalla de movil o pantalla de pc */
     border:0px;
     border-radius:7px;
     margin-bottom: 7px;

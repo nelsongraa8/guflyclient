@@ -1,12 +1,55 @@
-.container_home_movies {
-    max-width:920px;
+/** Estilo para la capa que contiene al mensaje de texto ensima del carrucel de imagenes en el fondo */
+.div_message_center_carroucel_message {
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    z-index:10;
+    background:linear-gradient( 45deg, #130D34 1%, transparent 99%), linear-gradient(to top, #130D34 1%, transparent 99%);;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
+/* Estilo para el titulo de la bienvenida */
+.div_message_center_carroucel_message > div > h1 {
+    margin:0px 0px 50px 80px;
+    text-align:left;
+    font-size:50px;
+    font-weight: 900;
+    font-family: arial;
+}
+
+/* Estilo para el mensaje de bienvenida */
+.div_message_center_carroucel_message > div > h2 {
+    margin:0px 80px 0px 80px;
+    text-align:left;
+    font-size:30px;
+    font-weight: 600;
+    font-family: arial;
+}
+
+/* Estilo para la capa que contiene a las productoras de cine */
+.div_message_center_carroucel_productoras {
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    z-index:11;
+    /* background:linear-gradient(to top, #130D34 1%, transparent 99%); */
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+}
+
+/* Estilo para las productoras que mostramos en gufly */
 .image_company_video {
-    /* width:120px; */
-    height: 75px;
+    height: 120px;
     border-radius: 7px;
-    margin:10px 5px
+    margin:0px 15px 10px 15px;
+    /* box-shadow: #0D0C11 5px 5px 10px 1px; */
 }
 
 
@@ -40,7 +83,6 @@
     font-size:12px;
 }
 
-
 .all_view_movie {
     display:flex;
     max-width:100%;
@@ -49,6 +91,25 @@
     justify-content: space-evenly;
 }
 
+.title_section_home_page {
+    color:#fff;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: arial;
+}
+.subtitle_section_home_page {
+    font-size: 14px; color:#ccc
+}
+
+.div_section_best_movies {
+    background:linear-gradient(to top, #120E20, #120E28 );
+    border-radius: 8px;
+    padding:30px 15px;
+    margin:10px 0px;
+    width:calc(100% - 20px)
+}
+
+/** End container */
 
 
 /** contenedor para scroll personalisado */

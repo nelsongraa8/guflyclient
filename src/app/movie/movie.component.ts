@@ -23,21 +23,10 @@ export class MovieComponent implements OnInit {
   idioma_subtitle:any = 'Español';
 
   lista_actores:any = [];
-  // lista_actores = [
-  //   { 'foto':'Ryan_Reynolds.jpg', 'name':'Ryan Reynolds' },
-  //   { 'foto':'Samuel_L._Jackson_Cannes.jpg', 'name':'Samuel L. Jackson Cannes' },
-  //   { 'foto':'Gary_Oldman.jpg', 'name':'Gary Oldman' },
-  //   { 'foto':'Elodie_Yung_by_Gage_Skidmore.jpg', 'name':'Elodie Yung' },
-  //   { 'foto':'Joaquim_de_Almeida.jpg', 'name':'Joaquim de Almeida' },
-  // ];
 
-  // recomended_movies = [
-  //   { 'name' : '6 Underground' , 'foto' : '6_underground-411208949-mmed.jpg' , 'anno' : '2016' },
-  //   { 'name' : '10LXS' , 'foto' : 'poster_howls_moving_castle.jpg' , 'anno' : '2020' },
-  //   { 'name' : 'Rapido y Furioso' , 'foto' : '2_fast_2_furious-199382456-mmed.jpg' , 'anno' : '2006' },
-  // ];
-
-  constructor( private movieService : MovieService , private rutaActiva: ActivatedRoute ) {}
+  constructor( private movieService : MovieService , private rutaActiva: ActivatedRoute ) {
+    // console.log( this.id_route_movie )
+  }
 
   ngOnInit() {
 
@@ -104,7 +93,6 @@ export class MovieComponent implements OnInit {
 
     let index:number = 0;
     for ( const iterator of this.movie_singler_credits.crew ) {
-      //let director = iterator.job
       if( iterator.job == 'Director' ) {
         if( value_format == 'coma_title' ) {
           if( index == 0 ) {  salida = iterator.name }

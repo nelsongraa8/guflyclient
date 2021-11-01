@@ -1,2 +1,52 @@
+<div class="container_general_navbar_page">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar_main_page">
+        <div class="container">
+            <a class="navbar-brand" href="#"><b>Gufly</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Peliculas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Series</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link disabled" tabindec="-1" aria-disabled="true">Reportajes</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex">
+                    <img src="./assets/image/default_user.png" style="width:30px; height:30px; border-radius: 50%;">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8"> 
+                <nav class="navbar navbar-light">
+                    <form class="container-fluid">
+                        <div class="input-group search_main_page_movie">
+                            <input type="text" class="form-control" placeholder="Duro de Cuidar" [(ngModel)]="inputsearch">
+                            <div class="input-group-text" id="btnGroupAddon2" style="background:#232323; border:0px; color:#ddd" (click)="search_movie()">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </form>
+                </nav>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+</div>
  <router-outlet></router-outlet>
 
