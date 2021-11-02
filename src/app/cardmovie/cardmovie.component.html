@@ -3,10 +3,10 @@
     <div class="element_movie_recomended" >
         <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ item.data_tmdb.poster_path }}">
         <div>
-            <div style="font:400 16px calibri; color:#fff">{{ item.nombre }}</div>
+            <div style="font:400 16px calibri; color:#fff; max-width:180px; max-height: 20px; overflow:hidden">{{ item.nombre }}</div>
             <div class="value_anno_recomended_movie" style="font-size:14px; color:#777">
                 {{ item.anno }}
-            </div>  
+            </div>
         </div>
         <div style="text-align:right; margin-top: -15px;">
             <i class="fa fa-cloud-download" style="font-size: 18px;"></i>
