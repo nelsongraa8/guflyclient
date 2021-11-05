@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AllmovieService } from './allmovie.service';
+// import { AllmovieService } from '../allmovies/allmovie.service';
 import { DestacadosService } from '../destacados/destacados.service';
 
 @Component({
@@ -9,21 +9,21 @@ import { DestacadosService } from '../destacados/destacados.service';
 })
 export class HomeComponent implements OnInit {
 
-    recomended_movies:any = [];
-    allmovies:any = [];
+    // recomended_movies:any = [];
+    // allmovies:any = [];
     alldestacados:any = [];
 
     constructor(
-      private allmovieService : AllmovieService,
+      // private allmovieService : AllmovieService,
       private destacadosService : DestacadosService,
     ) { }
 
     ngOnInit() {
-      this.allmovieService.getMovies().then(
-        (movies_data : any) => {
-          this.allmovies = movies_data;
-        }
-      );
+      // this.allmovieService.getMovies().then(
+      //   (movies_data : any) => {
+      //     this.allmovies = movies_data;
+      //   }
+      // );
 
       this.destacadosService.getRelevantes().then(
         ( data_relevantes:any ) => {

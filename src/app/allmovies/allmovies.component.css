@@ -1,0 +1,8 @@
+/** Visor del contenedor de las peliculas */
+.all_view_movie {
+    display:flex;
+    max-width:100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}

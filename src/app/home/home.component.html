@@ -41,22 +41,4 @@
 
 <app-destacados [alldestacados]="alldestacados"></app-destacados>
 
-<div class="container-fluid container_home_movies">
-    <div class="row">
-        <div class="col col-12" >
-            <div style="color:#fff">
-                <div class="title_section_home_page">
-                    Peliculas
-                </div>
-                <div class="subtitle_section_home_page" style="font-size: 12px">
-                    Explora centenares de películas y disfruta descargando tus géneros preferidos.
-                </div>
-            </div>
-        </div>
-        <div class="col col-12">
-            <div class="all_view_movie">
-                <app-cardmovie *ngFor="let item of allmovies; let i=index" [item]="item"></app-cardmovie>
-            </div>
-        </div>
-    </div>
-</div>
+<app-allmovies></app-allmovies>

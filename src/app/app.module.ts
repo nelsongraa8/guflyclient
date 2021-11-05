@@ -14,6 +14,7 @@ import { FindmovieComponent } from './findmovie/findmovie.component';
 import { FindinputComponent } from './findinput/findinput.component';
 import { DestacadosComponent } from './destacados/destacados.component';
 import { LastmoviesComponent } from './lastmovies/lastmovies.component';
+import { AllmoviesComponent } from './allmovies/allmovies.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LastmoviesComponent } from './lastmovies/lastmovies.component';
     FindmovieComponent,
     FindinputComponent,
     DestacadosComponent,
-    LastmoviesComponent
+    LastmoviesComponent,
+    AllmoviesComponent
   ],
   imports: [
     BrowserModule,  // Este modulo carga el sistema del navegador
