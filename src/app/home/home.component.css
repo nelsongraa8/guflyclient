@@ -44,45 +44,14 @@
     justify-content: left;
 }
 
-/* Estilo para las productoras que mostramos en gufly */
+/** Estilo para las productoras que mostramos en gufly */
 .image_company_video {
     height: 120px;
     border-radius: 7px;
     margin:0px 15px 10px 15px;
-    /* box-shadow: #0D0C11 5px 5px 10px 1px; */
 }
 
-
-
-/* contenedor para peliculas recomendadas */
-.container_recomended_movies {
-    display:flex;
-    overflow-x: auto;
-    margin-bottom: 90px;
-}
-
-.element_movie_recomended {
-    /* justify-content: space-between; */
-    border-radius:5px;
-    background:#0D0C11;
-    margin:10px 3px;
-    padding:7px 7px 14px 7px;
-    /* max-width:150px; */
-}
-
-.element_movie_recomended > img {
-    /* max-width:100%; */
-    width:120px;
-    border:0px;
-    border-radius:7px;
-    margin-bottom: 7px;
-}
-
-.element_movie_recomended > div {
-    color:#999;
-    font-size:12px;
-}
-
+/** Visor del contenedor de las peliculas */
 .all_view_movie {
     display:flex;
     max-width:100%;
@@ -91,71 +60,10 @@
     justify-content: space-evenly;
 }
 
-.title_section_home_page {
-    color:#fff;
-    font-size: 20px;
-    font-weight: 800;
-    font-family: arial;
-}
-.subtitle_section_home_page {
-    font-size: 14px; color:#ccc
-}
-
-.div_section_best_movies {
-    background:linear-gradient(to top, #120E20, #120E28 );
-    border-radius: 8px;
-    padding:30px 15px;
-    margin:10px 0px;
-    width:calc(100% - 20px)
-}
-
-/** End container */
-
-
-/** contenedor para scroll personalisado */
-.contenedor_autoscroll {
-    /*margin: 1rem auto;*/
-    /* border: 1px solid #aaa; */
-    height: auto;
-    /* width:100%; */
+/**  contenedor de compannias productoras que se ve con un scroll personalisado  */
+.contenedor_autoscrollbar_customscrollbar {
+    height: 140px;
     max-width: 100%;
-    /* background: #f1f2f3; */
     overflow:auto;
-    box-sizing: border-box;
-    /* padding:0 1rem; */
-    display:flex;
-
-    /*Estilos estándar experimentales (Principalmente Firefox)*/
-    /* scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0); */
-    scrollbar-color:#fff;
-    scrollbar-width: thin;
+    position: relative;
 }
-
-/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
-
-.contenedor_autoscroll::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
-
-.contenedor_autoscroll::-webkit-scrollbar:vertical {
-    width:10px;
-}
-
-.contenedor_autoscroll::-webkit-scrollbar-button:increment,.contenedor_autoscroll::-webkit-scrollbar-button {
-    display: none;
-}
-
-.contenedor_autoscroll::-webkit-scrollbar:horizontal {
-    height: 5px;
-}
-
-.contenedor_autoscroll::-webkit-scrollbar-thumb {
-    background-color: #797979;
-    border-radius: 20px;
-    /* border: 2px solid #f1f2f3; */
-}
-
-.contenedor_autoscroll::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
-/*  fin del contenedor personalisado  */

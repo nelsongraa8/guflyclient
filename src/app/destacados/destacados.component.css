@@ -1,0 +1,35 @@
+/** contenedor para peliculas recomendadas */
+.container_recomended_movies {
+    display:flex;
+    overflow-x: auto;
+    margin-bottom: 90px;
+}
+
+.element_movie_recomended {
+    border-radius:5px;
+    background:#0D0C11;
+    margin:10px 3px;
+    padding:7px 7px 14px 7px;
+}
+
+.element_movie_recomended > img {
+    width:120px;
+    border:0px;
+    border-radius:7px;
+    margin-bottom: 7px;
+}
+
+.element_movie_recomended > div {
+    color:#999;
+    font-size:12px;
+}
+
+.div_section_best_movies {
+    background:linear-gradient(to top, #120E20, #120E28 );
+    border-radius: 8px;
+    padding:30px 15px;
+    margin:10px 0px;
+    width:calc(100% - 20px)
+}
+
+/** End container */

@@ -1,0 +1,18 @@
+<div class="container-fluid container_home_movies">
+    <div class="row div_section_best_movies">
+        <div class="col col-4" >
+            <h2 style="margin-top:50px; font:900 30px arial; color:#fff">Mejores Peliculas</h2>
+            <div class="subtitle_section_home_page" style="margin-top:20px; font:400 18px calibri">
+                Explora entre centenares de peliculas que recomendamos a nuestros usuarios
+            </div>
+            <div style="margin-top:30px">
+                <button class="btn btn-primary" style="padding:5px 18px">Ver Todo</button>
+            </div>
+        </div>
+        <div class="col col-8">
+            <div class="container_recomended_movies contenedor_autoscroll" style="margin-bottom: 0px; background:transparent">
+                <app-cardmovie *ngFor="let item of alldestacados" [item]="item"></app-cardmovie>
+            </div>
+        </div>
+    </div>
+</div>

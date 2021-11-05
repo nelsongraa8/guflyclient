@@ -1,5 +1,5 @@
 
-<a href="/movie/{{ item.id }}" style="text-decoration: none">
+<a [routerLink]="['/movie/', item.id ]" style="text-decoration: none">
     <div class="element_movie_recomended" >
         <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ item.data_tmdb.poster_path }}">
         <div>

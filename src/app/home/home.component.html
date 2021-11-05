@@ -1,7 +1,7 @@
 <div class="container-fluid container_home_movies">
 
     <div class="row">
-        <div class="col-12" style="padding:0px">
+        <div class="col-12" style="margin-top:50px; padding:0px">
             <div style="position:relative">
 
                 <div class="div_message_center_carroucel_message">
@@ -12,18 +12,14 @@
                 </div>
 
                 <div class="div_message_center_carroucel_productoras">
-                    <div class="contenedor_autoscroll">
-                        <!-- <img class="image_company_video" src="./assets/image/disney.jpg">
-                        <img class="image_company_video" src="./assets/image/prime.jpg">
-                        <img class="image_company_video" src="./assets/image/hbo.jpg">
-                        <img class="image_company_video" src="./assets/image/Netflix.jpg"> -->
+                    <div class="contenedor_autoscrollbar_customscrollbar">
                         <img class="image_company_video" src="./assets/image/company/disney.png">
-                        <img class="image_company_video" src="./assets/image/company/pixar.png">
+                        <img class="image_company_video" src="./assets/image/company/warnerbrother.png">
+                        <img class="image_company_video" src="./assets/image/company/marvelestudios.png">
                         <img class="image_company_video" src="./assets/image/company/universal.png">
                         <img class="image_company_video" src="./assets/image/company/paramount.png">
+                        <img class="image_company_video" src="./assets/image/company/pixar.png">
                         <img class="image_company_video" src="./assets/image/company/20thcenturyfox.png">
-                        <img class="image_company_video" src="./assets/image/company/marvelestudios.png">
-                        <img class="image_company_video" src="./assets/image/company/warnerbrother.png">
                     </div>
                 </div>
 
@@ -41,44 +37,11 @@
 
 </div>
 
+<app-lastmovies></app-lastmovies>
+
+<app-destacados [alldestacados]="alldestacados"></app-destacados>
+
 <div class="container-fluid container_home_movies">
-    <div class="row" style="padding:0px 10px" style="margin-top: 20px;">
-        <div class="col col-12" >
-            <div class="title_section_home_page">
-                Añadidos recientemente
-            </div>
-            <div class="subtitle_section_home_page">
-                Las ultimas peliculas que añadimos para usted
-            </div>
-        </div>
-        <div class="col col-12">
-            <div class="container_recomended_movies contenedor_autoscroll" style="margin-left:-10px; margin-bottom: 0px; background:transparent">
-                <app-cardmovie *ngFor="let item of lastmovies" [item]="item"></app-cardmovie>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container container_home_movies">
-    <div class="row div_section_best_movies">   
-        <div class="col col-4" >
-            <h2 style="margin-top:50px; font:900 30px arial; color:#fff">Mejores Peliculas</h2>
-            <div class="subtitle_section_home_page" style="margin-top:20px; font:400 18px calibri">
-                Explora entre centenares de peliculas que recomendamos a nuestros usuarios
-            </div>
-            <div style="margin-top:30px">
-                <button class="btn btn-primary" style="padding:5px 18px">Ver Todo</button>
-            </div>
-        </div>
-        <div class="col col-8">
-            <div class="container_recomended_movies contenedor_autoscroll" style="margin-bottom: 0px; background:transparent">
-                <app-cardmovie *ngFor="let item of alldestacados" [item]="item"></app-cardmovie>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container container_home_movies">
     <div class="row">
         <div class="col col-12" >
             <div style="color:#fff">

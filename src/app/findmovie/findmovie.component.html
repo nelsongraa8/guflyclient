@@ -1,0 +1,14 @@
+<div class="container-fluid contenedor_top_search_movie">
+    <div class="row">
+        <div class="col-12">
+            <h3 style="font:600 30px arial; color:#fff; text-align: center;">
+                Resultados de la Busqueda
+            </h3>
+        </div>
+        <div class="col-12">
+            <div class="all_view_movie_search">
+                <app-cardmovie *ngFor="let item of allmoviesearch; let i=index" [item]="item"></app-cardmovie>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+.contenedor_top_search_movie {
+    margin-top: 150px;
+}
+
+.all_view_movie_search {
+    display:flex;
+    max-width:100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}

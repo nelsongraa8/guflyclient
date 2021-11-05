@@ -10,6 +10,8 @@
   <!-- CSS only -->
   <link href="./assets/css/font-awesome.min.css" rel="stylesheet">
   <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css" />
 </head>
 <body>
   <app-root></app-root>
@@ -17,5 +19,20 @@
   <!-- JavaScript Bundle with Popper -->
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="./assets/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+  <script>
+    (function($){
+        $(window).on("load",function(){
+            $(".contenedor_autoscrollbar_customscrollbar").mCustomScrollbar({
+              axis:"x",
+              theme:"dark-thin",
+              autoExpandScrollbar:true,
+              advanced:{autoExpandHorizontalScroll:true}
+            });
+        });
+    })(jQuery);
+  </script>
 </body>
 </html>

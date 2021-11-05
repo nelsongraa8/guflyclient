@@ -10,13 +10,21 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
+import { FindmovieComponent } from './findmovie/findmovie.component';
+import { FindinputComponent } from './findinput/findinput.component';
+import { DestacadosComponent } from './destacados/destacados.component';
+import { LastmoviesComponent } from './lastmovies/lastmovies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
     CardmovieComponent,
-    HomeComponent
+    HomeComponent,
+    FindmovieComponent,
+    FindinputComponent,
+    DestacadosComponent,
+    LastmoviesComponent
   ],
   imports: [
     BrowserModule,  // Este modulo carga el sistema del navegador

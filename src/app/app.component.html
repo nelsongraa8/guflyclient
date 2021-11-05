@@ -28,25 +28,8 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8"> 
-                <nav class="navbar navbar-light">
-                    <form class="container-fluid">
-                        <div class="input-group search_main_page_movie">
-                            <input type="text" class="form-control" placeholder="Duro de Cuidar" [(ngModel)]="inputsearch">
-                            <div class="input-group-text" id="btnGroupAddon2" style="background:#232323; border:0px; color:#ddd" (click)="search_movie()">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </form>
-                </nav>
-            </div>
-            <div class="col-2"></div>
-        </div>
-    </div>
-
+    <app-findinput></app-findinput>
 </div>
- <router-outlet></router-outlet>
+
+<router-outlet></router-outlet>
 
