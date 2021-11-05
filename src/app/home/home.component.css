@@ -51,15 +51,6 @@
     margin:0px 15px 10px 15px;
 }
 
-/** Visor del contenedor de las peliculas */
-.all_view_movie {
-    display:flex;
-    max-width:100%;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
 /**  contenedor de compannias productoras que se ve con un scroll personalisado  */
 .contenedor_autoscrollbar_customscrollbar {
     height: 140px;
