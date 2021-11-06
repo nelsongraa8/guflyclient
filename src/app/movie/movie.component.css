@@ -1,20 +1,20 @@
 
 .data_movie_poster {
     color:#ddd;
-    padding-left:10px;
+    padding:30px;
     display:inline-block
 }
 
 .data_movie_poster > h4 {
-    font-size:16px;
-    font-weight: 600;
-    font-family: "Roboto";
+    font-size:30px;
+    font-weight: 800;
+    font-family: "Arial";
     display:inline;
 }
 
 .data_creators_movie_poster {
     display:inline;
-    font-size: 12px;
+    font-size: 16px;
     text-align: left;
 }
 
@@ -27,26 +27,31 @@
 
 /* elemento para albergar al boton de download */
 .data_info_download_movie {
-    /* display: flex; */
-    margin:0px 0px;
-    text-align: right;
+    margin:20px 10px;
 }
 .data_info_download_movie > button {
-    font: 14px "Roboto";
-    border-radius:30px;
-    padding: 4px 20px;
+    font: 14px "calibri";
+    border-radius:5px;
+    padding: 6px 20px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+}
+.data_info_download_movie > button > a {
+    text-decoration: none;
 }
 .data_info_download_movie > div {
     flex:content;
 }
 
 .data_info_general_view_movie > h5 {
-    font-size:14px;
+    font-size:18px;
     font-family: Roboto;
     margin:0px 0px 5px 0px;
 }
 .data_info_general_view_movie > p {
-    font-size: 13px;
+    font-size: 16px;
     margin-bottom: 0px;
     line-height:1;
 }
@@ -55,58 +60,67 @@
     /* padding:10px; */
     margin:10px;
     background: #0D0C11;
-    /* box-shadow: #222 0px 0px 1px 10px; */
     border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 .title_marco_estilo_data_movie {
-    color:#fff;
-    font-size:16px;
-    padding:5px 10px;
+    color:#ddd;
+    font:600 20px arial;
+    padding:15px 30px;
     background:#101012;
-    border-radius:4px 4px 0px 0px;
     font-weight: 600;
+    border-radius:4px 4px 0px 0px;
+        -webkit-border-radius:4px 4px 0px 0px;
+        -moz-border-radius:4px 4px 0px 0px;
+        -ms-border-radius:4px 4px 0px 0px;
+        -o-border-radius:4px 4px 0px 0px;
 }
 .body_marco_estilo_data_movie {
     color:#fff;
-    font-size:13px;
+    font-size:16px;
     padding:5px 10px 5px 10px;
 }
 
 /* elemento que crea el gradiente en el fanart principal de la movie */
 .gradient_top_fanart_movie {
-    z-index:1000;
+    z-index:10;
     position:absolute;
     top:0px;
     right:0px;
     bottom:0px;
     left:0px;
-    background:linear-gradient(to top, #060411, transparent);
+    background:linear-gradient(to top, #130D34, transparent 99%);
 }
 
 /* elemento contenedor de todo el reparto de actores */
 .container_reparto_actores_movie {
-    overflow-x: scroll ;
+    overflow-x: scroll;
+    padding: 10px;
 }
 
 /* Elementos de cada uno del reparto de actores */
 .container_reparto_actores_movie > div {
     justify-content: space-between;
-    margin:5px;
-    width:90px;
-    /* height:70px; */
-    /* height:50px; */
-    border-radius:100px;
-    /* background: #999; */
     text-align: center;
-    /* overflow: hidden; */
-    /* position:relative; */
 }
 
 .container_image_reparto_actores_movie {
-    position:relative; overflow: hidden; width:80px; height: 80px; border-radius: 50px
+    position:relative;
+    overflow: hidden;
+    width: 130px;
+    height: 130px;
+    margin: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .container_image_reparto_actores_movie > img {
-    width:80px;
+    width:130px;
     top:0%;
     left:0px;
     position: absolute;
@@ -117,10 +131,10 @@
     margin:5px 20px;
 }
 
-.container_other_data_movie .value_info_aditional_movie {
+/* .container_other_data_movie .value_info_aditional_movie {
     color:#aaa;
     display:inline-block;
-}
+} */
 
 /* contenedor para peliculas recomendadas */
 .container_recomended_movies {
@@ -159,4 +173,18 @@
     padding:10px;
     background: rgba(0, 0, 0, 0.9);
     z-index:1000;
+}
+
+/** Para estilos de la seccion de informacion adicional */
+.element_info_add_movie {
+    padding: 10px 0px 10px 40px;
+    color:#bbb;
+    font-size:16px;
+    background: #0D0C11;
+}
+.element_info_add_movie .value_info_aditional_movie {
+    color:#ddd;
+    font: 600 16px calibri;
+    margin-left: 20px;
+    display:inline
 }
