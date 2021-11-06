@@ -1,0 +1,10 @@
+(function($){
+    $(window).on("load",function(){
+        $(".contenedor_autoscrollbar_customscrollbar").mCustomScrollbar({
+            axis:"x",
+            theme:"dark-thin",
+            autoExpandScrollbar:true,
+            advanced:{autoExpandHorizontalScroll:true}
+        });
+    });
+})(jQuery);

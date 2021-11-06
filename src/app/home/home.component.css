@@ -6,7 +6,7 @@
     bottom:0px;
     left:0px;
     z-index:10;
-    background:linear-gradient( 45deg, #130D34 1%, transparent 99%), linear-gradient(to top, #130D34 1%, transparent 99%);;
+    background:linear-gradient( 45deg, #130D34 1%, transparent 99%), linear-gradient(to top, #130D34, transparent 99%);;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -49,6 +49,8 @@
     height: 120px;
     border-radius: 7px;
     margin:0px 15px 10px 15px;
+    padding: 10px;
+    background: #ddd;
 }
 
 /**  contenedor de compannias productoras que se ve con un scroll personalisado  */

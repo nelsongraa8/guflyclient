@@ -20,42 +20,9 @@
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="./assets/js/jquery.min.js"></script>
   <script src="./assets/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
-  <script>
-    (function($){
-        $(window).on("load",function(){
-            $(".contenedor_autoscrollbar_customscrollbar").mCustomScrollbar({
-              axis:"x",
-              theme:"dark-thin",
-              autoExpandScrollbar:true,
-              advanced:{autoExpandHorizontalScroll:true}
-            });
-        });
-    })(jQuery);
-  </script>
-
-
-  <script src="./assets/plugins/Granim/granim.js"></script>
-  <script>
-    var granimInstance = new Granim({
-        element: '#unapruebaconelfondo',
-        direction: 'left-right',
-        isPausedWhenNotInView: true,
-        states : {
-            "default-state": {
-                gradients: [
-                    ['#ff9966', '#ff5e62'],
-                    ['#00F260', '#0575E6'],
-                    ['#e1eec3', '#f05053']
-                ]
-            }
-        }
-    });
-  </script>
-
-
-
+  <script src="./assets/plugins/mCustomScrollbar/main.mCustumScrollbar.js"></script>
 
 </body>
 </html>

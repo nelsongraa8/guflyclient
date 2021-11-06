@@ -20,7 +20,8 @@
 }
 
 body {
-    background: radial-gradient(ellipse, #130D34, #060410);
+    /* background: radial-gradient(ellipse, #130D34, #060410); */
+    background: linear-gradient( to right, #130D34, #060410 30%, #130D34 );
     margin:0px;
     padding:0px;
     font-family: "calibri";
