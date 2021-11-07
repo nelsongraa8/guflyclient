@@ -9,7 +9,6 @@ import { MovieService } from './movie.service';
 })
 export class MovieComponent implements OnInit {
 
-  //data_movie:any = [];
   movie_singler:any;
   movie_singler_api:any;
   movie_singler_credits:any;
@@ -25,7 +24,6 @@ export class MovieComponent implements OnInit {
   lista_actores:any = [];
 
   constructor( private movieService : MovieService , private rutaActiva: ActivatedRoute ) {
-    // console.log( this.id_route_movie )
   }
 
   ngOnInit() {

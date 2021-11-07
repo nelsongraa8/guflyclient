@@ -15,5 +15,10 @@
                 <app-cardmovie *ngFor="let item of allmovies; let i=index" [item]="item"></app-cardmovie>
             </div>
         </div>
+        <div class="col col-12" style="margin:20px auto; text-align: center">
+            <button class="btn btn-primary" (click)="getLimitMovies()" style="padding:5px 25px">
+                Ver Mas <i class="fa fa-film" style="margin-left: 5px"></i>
+            </button>
+        </div>
     </div>
 </div>

@@ -9,8 +9,8 @@ export class AllmovieService {
 
   constructor( private http : HttpClient ) { }
 
-  getMovies() : any {
-    return this.http.get( environment.url+'/allmoviedata' ).toPromise();
+  getMovies( id_limit_movie:any , max_result:any ) : any {
+    return this.http.get( environment.url + '/allmoviedata/' + id_limit_movie + "/" + max_result ).toPromise();
   }
 
 }
