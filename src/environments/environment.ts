@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'http://localhost/gufly',
+  url: 'http://localhost:8000',
 };
 
 /*
