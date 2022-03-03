@@ -10,7 +10,7 @@ export class DestacadosService {
   constructor( private http : HttpClient ) { }
 
   getRelevantes() : any {
-    return this.http.get( environment.url+'/relevantesdata' ).toPromise();
+    return this.http.get( environment.url+'/relevantesmoviedata' ).toPromise();
   }
 
 }
